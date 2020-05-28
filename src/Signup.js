@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-export default function Contact() {
+export default function Signup() {
   const [formData, setFormData] = useState({});
   const [message, setMessage] = useState("");
 
@@ -34,7 +34,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="App">
+    <div>
       <form
         className="input-form"
         id="contact"
@@ -42,28 +42,50 @@ export default function Contact() {
         required
         onSubmit={sendData}
       >
+        <label htmlFor="firstName">First Name</label>
         <input
-          name="name"
           type="text"
-          placeholder="Name"
+          name="firstName"
+          placeholder="First Name"
           required
           onChange={handleInput}
         />
+        <label htmlFor="lastName">Last Name</label>
         <input
-          name="email"
+          type="text"
+          name="lastName"
+          placeholder="Last Name"
+          required
+          onChange={handleInput}
+        />
+        <label htmlFor="email">Email</label>
+        <input
           type="email"
+          name="email"
           placeholder="Email"
           required
           onChange={handleInput}
         />
+        <label htmlFor="social">Your Twitter/LinkedIn url</label>
         <input
-          name="email"
-          type="email"
-          placeholder="Email"
+          type="url"
+          name="social"
+          placeholder="linkedin.com/in/malikpiara/"
           required
           onChange={handleInput}
         />
-        <textarea name="message" placeholder="Message" onChange={handleInput} />
+        <label htmlFor="location">Where are you currently living?</label>
+        <input
+          type="text"
+          name="location"
+          placeholder="Porto, Portugal"
+          required
+          onChange={handleInput}
+        />
+        <label htmlFor="why">
+          Why do you want to join our slack community?*
+        </label>
+        <textarea name="why" onChange={handleInput} />
         <input name="submit" type="submit" value="Send" />
         <div>{message}</div>
       </form>

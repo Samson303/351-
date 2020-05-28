@@ -1,21 +1,17 @@
 import React from "react";
 import Contact from "./Contact";
 import "./styles.css";
+import Signup from "./Signup";
 
 export default function App() {
   return (
     <>
-      <h1 style={{ textAlign: "center" }}>
-        <a href="https://airtable.com/shrOAR6Hg7a4Y3aHr" target="_blank">
-          Airtable View
-        </a>
-      </h1>
-      <div className="App">
-        <div className="contact-form form">
-          <h1>Contact Form</h1>
-          <Contact />
-        </div>
+      <div>
+        <h1>Join Our Slack Community </h1>
+        <p>351 is the startup community </p>based in Portugal. Sign up here to
+        get your invataion.
       </div>
+      <Signup />
     </>
   );
 }
